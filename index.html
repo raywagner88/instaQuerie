@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>InstaQuery</title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="jquery.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h1>InstaQuery</h1>
+  <div class="container">
+    <div class="row">
+      <div id="form-section" class="col s6">
+        <div class="input-field">
+          <i class="material-icons prefix">attach_file</i>
+          <input id="img-url" type="text" class="validate">
+          <label for="img-url">Image URL</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">border_horizontal</i>
+          <input id="img-width" type="number" class="validate">
+          <label for="img-width">Image Width</label>
+        </div>
+        <div class="input-field">
+          <i class="material-icons prefix">border_vertical</i>
+          <input id="img-height" type="number" class="validate">
+          <label for="img-height">Image Height</label>
+        </div>
+        <div class="input-field">
+          <select id="img-filter" class="icons">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="sepia" data-icon="data-icon/sepia.jpg" class="left">Sepia</option>
+              <option value="brightness" data-icon="data-icon/brightness.jpg" class="left">Brightness</option>
+              <option value="grayscale" data-icon="data-icon/grayscale.jpg" class="left">Grayscale</option>
+              <option value="contrast" data-icon="data-icon/contrast.jpg" class="left">Contrast</option>
+              <option value="invert" data-icon="data-icon/invert.jpg" class="left">Invert</option>
+              <option value="saturate" data-icon="data-icon/saturate.jpg" class="left">Saturate</option>
+            </select>
+          <label>Filters</label>
+        </div>
+        <p class="range-field">
+          <input type="range" id="sepia" class="filter-options hidden" min="0" max="100" />
+          <input type="range" id="brightness" class="filter-options hidden" min="0" max="100" />
+          <input type="range" id="grayscale" class="filter-options hidden" min="0" max="100" />
+          <input type="range" id="contrast" class="filter-options hidden" min="0" max="100" />
+          <input type="range" id="invert" class="filter-options hidden" min="0" max="100" />
+          <input type="range" id="saturate" class="filter-options" min="0" max="100" />
+        </p>
+        <button id="load-picture" class="btn waves-effect waves-light">Submit
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+      <div id="img-section" class="col s6">
+        <img id="picture" src="" width="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+</body>
+
+</html>
