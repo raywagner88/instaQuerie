@@ -33,8 +33,9 @@
           <label for="img-height">Image Height</label>
         </div>
         <div class="input-field">
+          <i class="material-icons prefix">photo_filter</i>
           <select id="img-filter" class="icons">
-              <option value="" disabled selected>Choose your option</option>
+              <option value="" disabled selected>Choose your filter</option>
               <option value="sepia" data-icon="data-icon/sepia.jpg" class="left">Sepia</option>
               <option value="brightness" data-icon="data-icon/brightness.jpg" class="left">Brightness</option>
               <option value="grayscale" data-icon="data-icon/grayscale.jpg" class="left">Grayscale</option>
@@ -45,19 +46,31 @@
           <label>Filters</label>
         </div>
         <p class="range-field">
-          <input type="range" id="sepia" class="filter-options hidden" min="0" max="100" />
-          <input type="range" id="brightness" class="filter-options hidden" min="0" max="100" />
-          <input type="range" id="grayscale" class="filter-options hidden" min="0" max="100" />
-          <input type="range" id="contrast" class="filter-options hidden" min="0" max="100" />
-          <input type="range" id="invert" class="filter-options hidden" min="0" max="100" />
-          <input type="range" id="saturate" class="filter-options" min="0" max="100" />
+          <input type="range" id="sepia" class="filter-options hidden" value="0" min="0" max="100" />
+          <input type="range" id="brightness" class="filter-options hidden" value="100" min="0" max="200" />
+          <input type="range" id="grayscale" class="filter-options hidden" value="0" min="0" max="100" />
+          <input type="range" id="contrast" class="filter-options hidden" value="100" min="0" max="200" />
+          <input type="range" id="invert" class="filter-options hidden" value="0" min="0" max="100" />
+          <input type="range" id="saturate" class="filter-options hidden" value="100" min="0" max="200" />
         </p>
         <button id="load-picture" class="btn waves-effect waves-light">Submit
           <i class="material-icons right">send</i>
         </button>
       </div>
       <div id="img-section" class="col s6">
-        <img id="picture" src="" width="" alt="">
+        <div id="img-saturate">
+          <div id="img-invert">
+            <div id="img-contrast">
+              <div id="img-grayscale">
+                <div id="img-brightness">
+                  <div id="img-sepia">
+                    <img id="picture" src="" width="" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
