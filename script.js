@@ -19,6 +19,10 @@ $(document).ready(function() {
   const INVERT_FILTER = $('#img-invert');
   const SATURATE = $('#saturate');
   const SATURATE_FILTER = $('#img-saturate');
+  const BLUR = $('#blur');
+  const BLUR_FILTER = $('#img-blur');
+  const HUE_ROTATE = $('#hue-rotate');
+  const HUE_ROTATE_FILTER = $('#img-hue-rotate');
 
 
   LOAD_PICTURE.click(function() {
@@ -31,6 +35,8 @@ $(document).ready(function() {
     CONTRAST_FILTER.css('filter', `contrast(${CONTRAST.val()}%)`);
     INVERT_FILTER.css('filter', `invert(${INVERT.val()}%)`);
     SATURATE_FILTER.css('filter', `saturate(${SATURATE.val()}%)`);
+    BLUR_FILTER.css('filter', `blur(${BLUR.val()}px)`);
+    HUE_ROTATE_FILTER.css('filter', `hue-rotate(${HUE_ROTATE.val()}deg)`);
   });
 
   IMG_FILTER.change(function(e) {

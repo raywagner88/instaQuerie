@@ -42,6 +42,8 @@
               <option value="contrast" data-icon="data-icon/contrast.jpg" class="left">Contrast</option>
               <option value="invert" data-icon="data-icon/invert.jpg" class="left">Invert</option>
               <option value="saturate" data-icon="data-icon/saturate.jpg" class="left">Saturate</option>
+              <option value="blur" data-icon="data-icon/saturate.jpg" class="left">Blur</option>
+              <option value="hue-rotate" data-icon="data-icon/saturate.jpg" class="left">Hue Rotate</option>
             </select>
           <label>Filters</label>
         </div>
@@ -52,19 +54,25 @@
           <input type="range" id="contrast" class="filter-options hidden" value="100" min="0" max="200" />
           <input type="range" id="invert" class="filter-options hidden" value="0" min="0" max="100" />
           <input type="range" id="saturate" class="filter-options hidden" value="100" min="0" max="200" />
+          <input type="range" id="blur" class="filter-options hidden" value="0" min="0" max="100" />
+          <input type="range" id="hue-rotate" class="filter-options hidden" value="0" min="0" max="360" />
         </p>
         <button id="load-picture" class="btn waves-effect waves-light">Render Image
           <i class="material-icons right">send</i>
         </button>
       </div>
       <div id="img-section" class="col s6">
-        <div id="img-saturate">
-          <div id="img-invert">
-            <div id="img-contrast">
-              <div id="img-grayscale">
-                <div id="img-brightness">
-                  <div id="img-sepia">
-                    <img id="picture" src="" width="" alt="">
+        <div id="img-hue-rotate">
+          <div id="img-blur">
+            <div id="img-saturate">
+              <div id="img-invert">
+                <div id="img-contrast">
+                  <div id="img-grayscale">
+                    <div id="img-brightness">
+                      <div id="img-sepia">
+                        <img id="picture" src="" width="" alt="">
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
