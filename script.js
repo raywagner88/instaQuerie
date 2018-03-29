@@ -23,6 +23,8 @@ $(document).ready(function() {
   const BLUR_FILTER = $('#img-blur');
   const HUE_ROTATE = $('#hue-rotate');
   const HUE_ROTATE_FILTER = $('#img-hue-rotate');
+  const IMAGE = $('#img');
+  const SAVE_IMAGE_BTN = $('#btnSave');
 
 
   LOAD_PICTURE.click(function() {
