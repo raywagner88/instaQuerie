@@ -1,5 +1,7 @@
 $(document).ready(function() {
+
   $('select').formSelect();
+
   const LOAD_PICTURE = $('#load-picture');
   const PICTURE = $('#picture');
   const IMG_URL = $('#img-url');
@@ -50,4 +52,22 @@ $(document).ready(function() {
       }
     });
   });
-});
+
+
+
+  // domtoimage.toBlob(document.getElementById('my-node'))
+  //   .then(function(blob) {
+  //     window.saveAs(blob, 'my-node.png');
+  //   });
+
+  $("#btnSave").click(function() {
+    domtoimage.toBlob(document.getElementById('img'))
+      .then(function(blob) {
+        console.log(blob);
+        window.saveAs(blob, 'my-node.png');
+      })
+      .catch(function(error) {
+        console.error('oops, something went wrong!', error);
+      });
+  });
+}); //docunment ready
